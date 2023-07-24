@@ -79,7 +79,8 @@ const contained = {
     backgroundColor: secondary.main,
 
     "&:hover": {
-      backgroundColor: secondary.main,
+      backgroundColor: text.main,
+      color: white.main,
     },
 
     "&:focus:not(:hover)": {

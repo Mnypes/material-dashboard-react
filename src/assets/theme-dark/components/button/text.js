@@ -20,7 +20,7 @@ import typography from "assets/theme-dark/base/typography";
 // Material Dashboard 2 React Helper Functions
 import pxToRem from "assets/theme-dark/functions/pxToRem";
 
-const { text, info, secondary, transparent } = colors;
+const { text, info, secondary, transparent, dark } = colors;
 const { size } = typography;
 
 const buttonText = {
@@ -32,7 +32,7 @@ const buttonText = {
     padding: `${pxToRem(9)} ${pxToRem(24)}`,
 
     "&:hover": {
-      backgroundColor: transparent.main,
+      backgroundColor: dark.main,
       boxShadow: "none",
     },
 

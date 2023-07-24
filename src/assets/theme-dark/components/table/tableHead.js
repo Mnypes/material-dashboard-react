@@ -21,7 +21,7 @@ import pxToRem from "assets/theme-dark/functions/pxToRem";
 
 const { borderRadius } = borders;
 
-const tableHead = {
+const TableHead = {
   styleOverrides: {
     root: {
       display: "block",
@@ -31,4 +31,4 @@ const tableHead = {
   },
 };
 
-export default tableHead;
+export default TableHead;

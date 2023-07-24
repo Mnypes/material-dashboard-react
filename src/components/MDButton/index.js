@@ -46,9 +46,9 @@ const MDButton = forwardRef(
 
 // Setting default values for the props of MDButton
 MDButton.defaultProps = {
-  size: "medium",
+  size: "small",
   variant: "contained",
-  color: "white",
+  color: "error",
   circular: false,
   iconOnly: false,
 };

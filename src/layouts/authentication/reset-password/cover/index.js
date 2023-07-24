@@ -15,6 +15,9 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Card from "@mui/material/Card";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -26,9 +29,29 @@ import MDButton from "components/MDButton";
 import CoverLayout from "layouts/authentication/components/CoverLayout";
 
 // Images
-import bgImage from "assets/images/bg-reset-cover.jpeg";
+import bgImage from "assets/images/red-wine.png";
 
 function Cover() {
+  const navigate = useNavigate();
+  const [setIsSubmit] = useState(false);
+  const [values] = useState({
+    email: "",
+  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // setFormErrors(validate(values));
+    axios
+      .post("https://reqres.in/api/login", {
+        email: values.email,
+      })
+      .then(() => {
+        // localStorage.setItem("token", res.data.token);
+        alert("account set up successfully");
+        navigate("/authentication/sign-in");
+      })
+      .catch((err) => console.error(err));
+    setIsSubmit(true);
+  };
   return (
     <CoverLayout coverHeight="50vh" image={bgImage}>
       <Card>
@@ -56,7 +79,7 @@ function Cover() {
               <MDInput type="email" label="Email" variant="standard" fullWidth />
             </MDBox>
             <MDBox mt={6} mb={1}>
-              <MDButton variant="gradient" color="info" fullWidth>
+              <MDButton variant="gradient" color="info" fullWidth onClick={handleSubmit}>
                 reset
               </MDButton>
             </MDBox>

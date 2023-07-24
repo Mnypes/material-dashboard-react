@@ -36,67 +36,22 @@ Coded by www.creative-tim.com
 */
 
 // Material Dashboard 2 React layouts
-import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
-import Billing from "layouts/billing";
-import RTL from "layouts/rtl";
-import Notifications from "layouts/notifications";
-import Profile from "layouts/profile";
 import SignIn from "layouts/authentication/sign-in";
-import SignUp from "layouts/authentication/sign-up";
+// import Dashboard from "layouts/dashboard";
+// import Profile from "layouts/profile";
+// import SignUp from "layouts/authentication/sign-up";
+// import Cover from "layouts/authentication/reset-password/cover";
+import Directors from "layouts/tables/FalseImport";
+import VatFraud from "layouts/tables/Friday";
+// import CustomData from "layouts/tables/Friday";
+// import FalseImports2 from "layouts/tables/FalseImport";
+// import Gridy from "layouts/tables/Grid";
+import FalseImports from "layouts/tables/Api";
 
 // @mui icons
 import Icon from "@mui/material/Icon";
 
 const routes = [
-  {
-    type: "collapse",
-    name: "Dashboard",
-    key: "dashboard",
-    icon: <Icon fontSize="small">dashboard</Icon>,
-    route: "/dashboard",
-    component: <Dashboard />,
-  },
-  {
-    type: "collapse",
-    name: "Tables",
-    key: "tables",
-    icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
-  },
-  {
-    type: "collapse",
-    name: "Billing",
-    key: "billing",
-    icon: <Icon fontSize="small">receipt_long</Icon>,
-    route: "/billing",
-    component: <Billing />,
-  },
-  {
-    type: "collapse",
-    name: "RTL",
-    key: "rtl",
-    icon: <Icon fontSize="small">format_textdirection_r_to_l</Icon>,
-    route: "/rtl",
-    component: <RTL />,
-  },
-  {
-    type: "collapse",
-    name: "Notifications",
-    key: "notifications",
-    icon: <Icon fontSize="small">notifications</Icon>,
-    route: "/notifications",
-    component: <Notifications />,
-  },
-  {
-    type: "collapse",
-    name: "Profile",
-    key: "profile",
-    icon: <Icon fontSize="small">person</Icon>,
-    route: "/profile",
-    component: <Profile />,
-  },
   {
     type: "collapse",
     name: "Sign In",
@@ -105,14 +60,64 @@ const routes = [
     route: "/authentication/sign-in",
     component: <SignIn />,
   },
+  // {
+  //   type: "collapse",
+  //   name: "Dashboard",
+  //   key: "dashboard",
+  //   icon: <Icon fontSize="small">dashboard</Icon>,
+  //   route: "/dashboard",
+  //   component: <Dashboard />,
+  // },
   {
     type: "collapse",
-    name: "Sign Up",
-    key: "sign-up",
-    icon: <Icon fontSize="small">assignment</Icon>,
-    route: "/authentication/sign-up",
-    component: <SignUp />,
+    name: "False Imports",
+    key: "False Imports",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "layouts/tables/Api",
+    component: <FalseImports />,
   },
+  {
+    type: "collapse",
+    name: "Directors",
+    key: "Directors",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "layouts/tables/FalseImport",
+    component: <Directors />,
+  },
+  {
+    type: "collapse",
+    name: "VAT Fraud",
+    key: "Normal",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "layouts/tables/Friday",
+    component: <VatFraud />,
+  },
+  // {
+  //   type: "collapse",
+  //   name: "Profile",
+  //   key: "profile",
+  //   icon: <Icon fontSize="small">person</Icon>,
+  //   route: "/profile",
+  //   component: <Profile />,
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Sign Up",
+  //   key: "sign-up",
+  //   icon: <Icon fontSize="small">assignment</Icon>,
+  //   route: "/authentication/sign-up",
+  //   component: <SignUp />,
+  //   hidden: true, // this is added to hide route from being displayed in the sidenavbar
+  // },
+  // {
+  //   type: "collapse",
+  //   name: "Reset Password",
+  //   key: "cover",
+  //   icon: <Icon fontSize="small">assignment</Icon>,
+  //   route: "/authentication/reset-password/cover",
+  //   component: <Cover />,
+  //   hidden: true, // this is added to hide route from being displayed in the sidenavbar
+  // },
 ];
 
 export default routes;
